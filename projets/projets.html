@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://api.fontshare.com/v2/css?f[]=general-sans@600&f[]=clash-display@600,1&f[]=cabinet-grotesk@800&display=swap" rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="projets.css">
+    <link rel="icon" type="image/png" href="../asset/logo.png"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <title>AM Design - Projets</title>
+</head>
+<body>
+    <header data-aos="fade-down" data-aos-duration="1000" class="navBar">
+        <a href="../index.html" class="logo content">
+            <img src="../asset/logo.png" alt="logo">   
+        </a>
+        <div class="navResponsive">
+            <nav class="navbar content navItems">
+                <a href="../index.html#a-propos">à propos</a>
+                <a href="../index.html#services">services</a>
+                <a href="./projets.html">projets</a>           
+                <a href="../index.html#contact"><span class="btn-contact">contact</span></a>                 
+            </nav>
+            <div class="cursor5"></div>
+            <div class="cursor6"></div>  
+        </div>
+        <div class="burger">
+            <span></span>
+        </div>
+        <div class="cursor3"></div>
+        <div class="cursor4"></div>  
+    </header>
+    
+    <section class="menu">
+      <div class="menu-items">
+        <ul class="content">
+          <li data-aos="fade-up-right" data-aos-duration="1000" data-aos-delay="200">
+             <a href="#" onmouseenter="changeImage('../asset/img/IMG_4196.jpg')">Escaliers</a>
+          </li>
+          <li data-aos="fade-up-left" data-aos-duration="1000" data-aos-delay="400">
+              <a href="#" onmouseenter="changeImage('../asset/img/IMG_4201.jpg')">Pergolas</a>
+          </li>
+          <li data-aos="fade-up-right" data-aos-duration="1000" data-aos-delay="600">
+              <a href="#" onmouseenter="changeImage('../asset/img/IMG_4198.jpg')">Portails</a>
+          </li>
+          <li data-aos="fade-up-left" data-aos-duration="1000" data-aos-delay="800">
+              <a href="#" onmouseenter="changeImage('../asset/img/IMG_4202.jpg')">Grade Corps</a>
+          </li>
+          <li data-aos="fade-up-right" data-aos-duration="1000" data-aos-delay="1000">
+              <a href="#" onmouseenter="changeImage('../asset/img/IMG_4199.jpg')">Verrière</a>
+          </li>
+          <li data-aos="fade-up-left" data-aos-duration="1000" data-aos-delay="1200">
+              <a href="#" onmouseenter="changeImage('../asset/img/IMG_4200.jpg')">Décoration</a>
+          </li>
+        </ul>
+        <div class="cursor"></div>
+        <div class="cursor2"></div>
+      </div>
+      <div class="captions-section">
+          <img src="../asset/img/IMG_4196.jpg" id="slider" >
+      </div>
+    </section>
+    
+    
+    <script>
+        var cursor = document.querySelector('.cursor');
+        var cursor2 = document.querySelector('.cursor2');
+        document.addEventListener("mousemove",function(e){
+            cursor.style.cssText = cursor2.style.cssText ="left: " + e.clientX + "px; top: " + e.clientY + "px;";
+        });
+        var cursor3 = document.querySelector('.cursor3');
+        var cursor4 = document.querySelector('.cursor4');
+        document.addEventListener("mousemove",function(e){
+            cursor3.style.cssText = cursor4.style.cssText ="left: " + e.clientX + "px; top: " + e.clientY + "px;";
+        });
+        var cursor5 = document.querySelector('.cursor5');
+        var cursor6 = document.querySelector('.cursor6');
+        document.addEventListener("mousemove",function(e){
+            cursor5.style.cssText = cursor6.style.cssText ="left: " + e.clientX + "px; top: " + e.clientY + "px;";
+        });
+
+        const menuHamburger = document.querySelector(".burger")
+        const navLinks = document.querySelector("nav")
+        const section = document.querySelectorAll("section")
+
+        menuHamburger.addEventListener('click',()=>{
+            navLinks.classList.toggle('mobile-menu')
+        })
+
+        const burger = document.querySelector('.burger');
+         burger.addEventListener('click', () => {
+         burger.classList.toggle('active');
+        });
+      
+       function toggleDisplay() {
+        section.forEach(section => {
+         if (section.style.display === "none") {
+            section.style.display = "flex";
+             burger.classList.remove('active');
+             navLinks.classList.remove('mobile-menu') // ou "inline", "flex", etc. selon le type d'élément
+         } else {
+            section.style.display = "none";
+         }
+      });
+    }
+
+    burger.addEventListener("click", toggleDisplay);
+    navLinks.addEventListener("click", toggleDisplay);
+
+      function changeImage(anything){
+        document.getElementById('slider').src = anything;
+      }
+    </script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
