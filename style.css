@@ -501,8 +501,7 @@ button:focus svg {
   overflow: hidden;
   display: flex;
   justify-content: space-between;
-  padding: 0 50px;
-  padding-bottom: 30px;
+  padding: 70px 50px 20px 50px;
   font-size: 22px;
 }
 .b-to-top,.portfolio {
@@ -914,8 +913,8 @@ section#contact .container p {
   gap: 12rem;
 }
 .footer {
-  font-size: 14px;
-  padding: 200px 9px 0px;
+  font-size: 16px;
+  padding: 70px 9px 20px 9px;
 }
 }
 @media screen and (max-width: 435px) {
@@ -1007,6 +1006,6 @@ section#contact .container form input {
 }
 .footer {
   font-size: 14px;
-  padding: 350px 9px 20px 9px;
+  padding: 70px 9px 20px 9px;
 }
 }
