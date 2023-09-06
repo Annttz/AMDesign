@@ -273,8 +273,11 @@ to {
   color: rgb(209 209 199/1);
 }
 section#contact {
-  height: 90vh !important;
+  height: 90vh;
   padding:  0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 #contact .title-contact {
     text-align: center;
@@ -501,7 +504,7 @@ button:focus svg {
   overflow: hidden;
   display: flex;
   justify-content: space-between;
-  padding: 70px 50px 20px 50px;
+  padding: 0px 50px 20px;
   font-size: 22px;
 }
 .b-to-top,.portfolio {
@@ -700,10 +703,12 @@ b {
   font-size: 20px;
 }
 }
-@media screen and (max-width: 910px) {
+@media screen and (max-width: 1027px) {
   .cursor,.cursor2{
     display: none;
    }
+}
+@media screen and (max-width: 910px) {
   .h-page-title h1 {
     text-align: center;
     font-size: 14vh;
@@ -778,7 +783,7 @@ b {
   font-size: 16px;
 }
 .footer {
-  padding: 200px 50px 0px;  
+  padding: 0px 20px 50px;  
 }
 }
 @media screen and (max-width: 751px) {
@@ -914,7 +919,7 @@ section#contact .container p {
 }
 .footer {
   font-size: 16px;
-  padding: 70px 9px 20px 9px;
+  padding: 0px 20px 50px; 
 }
 }
 @media screen and (max-width: 435px) {
@@ -1006,6 +1011,6 @@ section#contact .container form input {
 }
 .footer {
   font-size: 14px;
-  padding: 70px 9px 20px 9px;
+  padding: 0px 20px 50px; 
 }
 }

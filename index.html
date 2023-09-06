@@ -25,12 +25,12 @@
     <title>AM Design</title>
 </head>
 <body>
-    <header data-aos="fade-down" data-aos-duration="1000" class="navBar">
+    <header data-aos="fade-down" data-aos-duration="1000" class="navBar" id="nav">
         <a href="index.html" class="logo content">
             <img src="./asset/logo.png" alt="logo">   
         </a>
         <div class="navResponsive">
-            <nav class="navbar navItems" id="nav">
+            <nav class="navbar navItems">
                 <a href="#a-propos">à propos</a>
                 <a href="#services">services</a>
                 <a href="./projets/projets.html">projets</a>
@@ -173,7 +173,6 @@
         const menuHamburger = document.querySelector(".burger")
         const navLinks = document.querySelector("nav")
         const section = document.querySelectorAll("section")
-        const footer = document.querySelector('footer') 
 
         menuHamburger.addEventListener('click',()=>{
             navLinks.classList.toggle('mobile-menu')
@@ -185,16 +184,21 @@
         });
       
        function toggleDisplay() {
+        console.log(['test'].includes);
         section.forEach(section => {
          if (section.style.opacity === "0") {
             section.style.opacity = "1";
              burger.classList.remove('active');
-             navLinks.classList.remove('mobile-menu') // ou "inline", "flex", etc. selon le type d'élément
-         } else {
+             navLinks.classList.remove('mobile-menu')
+         } else if (!navLinks.classList.contains('mobile-menu')) {
+            section.style.opacity = "1";
+            section.style.zIndex = "1";
+         }
+         else {
             section.style.opacity = "0";
             section.style.zIndex = "-99";
             section.style.position ="relative";
-         }
+         } 
       });
     }
 
