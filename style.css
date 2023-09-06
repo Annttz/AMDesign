@@ -516,9 +516,6 @@ button:focus svg {
    body {
       overflow: hidden auto;
    }
-   .cursor,.cursor2{
-    display: none;
-   }
    .navBar {
       display: flex;
       text-align: center;
@@ -704,6 +701,9 @@ b {
 }
 }
 @media screen and (max-width: 910px) {
+  .cursor,.cursor2{
+    display: none;
+   }
   .h-page-title h1 {
     text-align: center;
     font-size: 14vh;
