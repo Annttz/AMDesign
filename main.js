@@ -60,6 +60,7 @@ function sendMail() {
     };
 
     emailjs.send(serviceID, templateID, params);
+    swal("🎉", "Votre message c'est envoyé!", "success");
     
   } else {
       swal("🤔", "Votre message ne c'est pas envoyé! Verifiez les champs.", "error");

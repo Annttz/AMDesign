@@ -84,26 +84,26 @@
         <h1 class="services-title" data-aos="fade-down" data-aos-duration="1000">SERVICES</h1>
         <div class="services-div">
             <ul class="services-li">
-                <div data-aos="fade-right" data-aos-duration="1200" data-aos-delay="200">
+                <li data-aos="fade-right" data-aos-duration="1200" data-aos-delay="200">
                     <img src="./asset/conception.png" alt="img-conception">
-                    <li>Conception</li>
+                    <h2>Conception</h2>
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-                </div>
-                <div data-aos="fade-right" data-aos-duration="1200" data-aos-delay="400">
+                </li>
+                <li data-aos="fade-right" data-aos-duration="1200" data-aos-delay="400">
                     <img src="./asset/fabrication.png" alt="img-fabrication.png">
-                    <li>Fabrication</li>
+                    <h2>Fabrication</h2>
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-                </div>
-                <div data-aos="fade-right" data-aos-duration="1200" data-aos-delay="600">
+                </li>
+                <li data-aos="fade-right" data-aos-duration="1200" data-aos-delay="600">
                     <img src="./asset/finition.png" alt="img-finition.png">
-                    <li>Installation</li>
+                    <h2>Installation</h2>
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-                </div>
-                <div data-aos="fade-right" data-aos-duration="1200" data-aos-delay="800">
+                </li>
+                <li data-aos="fade-right" data-aos-duration="1200" data-aos-delay="800">
                     <img src="./asset/maintenance.png" alt="img-maintenance.png">
-                    <li>Maintenance</li>
+                    <h2>Maintenance</h2>
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-                </div>              
+                </li>              
             </ul>
             <div data-aos="flip-up" data-aos-duration="1000" data-aos-delay="950">
                 <a href="./projets/projets.html">Découvrez nos projets</a>
@@ -126,8 +126,8 @@
                 <br>
                 <br>
                 <form id="myForm">
-                    <input type="text" name="name" id="name" placeholder="Entrer votre nom" required>
-                    <input type="email" name="email" id="email" placeholder="Entrer votre e-mail" required>
+                    <input type="text" name="name" id="name" autocomplete="text" placeholder="Entrer votre nom" required>
+                    <input type="email" name="email" id="email" autocomplete="email" placeholder="Entrer votre e-mail" required>
                     <textarea name="message" id="message" placeholder="Entrer votre message" required></textarea>
                     <button class="submit" onclick="sendMail()"><span>Envoyer</span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
@@ -184,7 +184,6 @@
         });
       
        function toggleDisplay() {
-        console.log(['test'].includes);
         section.forEach(section => {
          if (section.style.opacity === "0") {
             section.style.opacity = "1";

@@ -235,9 +235,6 @@ header {
    body {
       overflow: hidden auto;
    }
-   .cursor,.cursor2,.cursor3,.cursor4,.cursor5,.cursor6 {
-    display: none;
-   }
    .navBar {
       display: flex;
       text-align: center;
@@ -321,6 +318,11 @@ header {
 .menu .menu-items ul li a {
     font-size: 65px;
 }
+}
+@media screen and (max-width: 1027px) {
+  .cursor,.cursor2,.cursor3,.cursor4,.cursor5,.cursor6 {
+    display: none;
+   }
 }
 @media screen and (max-width: 1010px) {
     .menu .menu-items ul li a {
