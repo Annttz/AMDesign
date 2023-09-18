@@ -37,9 +37,9 @@
                 <a href="#contact" ><span class="btn-contact">contact</span></a>
             </nav>    
         </div>
-            <div class="burger">
-                <span></span>
-            </div>
+        <div class="burger">
+            <span></span>
+        </div>
     </header>
 
 
@@ -105,7 +105,7 @@
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
                 </li>              
             </ul>
-            <div data-aos="flip-up" data-aos-duration="1000" data-aos-delay="950">
+            <div data-aos="fade-left" data-aos-duration="1200" data-aos-delay="950">
                 <a href="./projets/projets.html">Découvrez nos projets</a>
             </div>            
         </div>
@@ -126,14 +126,10 @@
                 <br>
                 <br>
                 <form id="myForm">
-                    <input type="text" name="name" id="name" autocomplete="text" placeholder="Entrer votre nom" required>
+                    <input type="text" name="name" id="name" autocomplete="name" placeholder="Entrer votre nom" required>
                     <input type="email" name="email" id="email" autocomplete="email" placeholder="Entrer votre e-mail" required>
                     <textarea name="message" id="message" placeholder="Entrer votre message" required></textarea>
-                    <button class="submit" onclick="sendMail()"><span>Envoyer</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                        <path d="M0 11c2.761.575 6.312 1.688 9 3.438 3.157-4.23 8.828-8.187 15-11.438-5.861 5.775-10.711 12.328-14 18.917-2.651-3.766-5.547-7.271-10-10.917z"/>
-                    </svg>
-                    </button>
+                    <button class="submit" type="button" onclick="sendMail()"><span>Envoyer</span></button>
                 </form>
             </div>
             <div  class="infos">
