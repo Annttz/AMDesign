@@ -452,11 +452,16 @@ button:hover {
 .swal-button, .swal-button:not([disabled]):hover {
   background-color: #a4a4a1;
 }
+#map {
+  padding: 20px;
+  text-align: center;
+  display: block;
+}
 .footer {
   overflow: hidden;
   display: flex;
   justify-content: space-between;
-  padding: 0px 30px 20px;
+  padding: 0px 30px 45px;
   font-size: 22px;
 }
 .b-to-top,.portfolio {
